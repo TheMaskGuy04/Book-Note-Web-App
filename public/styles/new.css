@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap');
+
+body {
+    padding: 4rem;
+    padding-top: 2rem;
+    background-image: linear-gradient(to bottom right,#0C134F, #5C469C, #D4ADFC, #1D267D);
+    font-weight: bolder;
+    font-size: larger;
+}
+
+h1 {
+    font-family: Rubik Doodle Shadow;
+    color: black;
+    text-align: center;
+}
+
+.new {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+form {
+    width: 45rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 10%;
+    padding: 2em;
+}
+
+.form-floating {
+    margin: 1.5rem;
+    align-items: center;
+    justify-content: center
+}
+
+label {
+    justify-content: flex-start;
+    margin-top: 2rem;
+}
+
+.submit {
+    margin-top: 2rem;
+    align-self: center;
+}
+
+#summary {
+    height: 15rem;
+}
+
+#notes {
+    height: 20rem;
+    
+}
+
+p {
+    align-self: center;
+}

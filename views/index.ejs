@@ -1,0 +1,48 @@
+<%- include('partials/header.ejs') %>
+
+<head>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+    <% if (locals.result.length != 0) { %>
+        <% for( let i = 0; i < result.length; i++ ) { %>
+            
+            <div class="container book" >
+        
+                <img class="bookImg" src="<%= result[i].imglink %>" alt="Book Cover" ></img>
+                <h2 class="title">Title - <%= result[i].title %></h2>
+                <p class="isbn">ISBN No. <%= result[i].isbn %></p>
+                <p class="Author">Author - <%= result[i].author %></p>
+                <p class="date">Date read: <%= result[i].date_read %></p>
+                <p class="recommend">How Strongly I recommend - <%= result[i].recommend %>/10</p>
+                <p class="summary">Summary - <%= result[i].summary %></p>
+
+                <% if (seeNotes == 0) { %>
+                    <form class="notes" method="POST" action="/notes">
+    
+                        <button class="submit btn btn-primary w-25 py-2" type="submit" href="/notes" name="id" value="<%= result[i].id %>">Read Notes about Book</button>
+                        
+                    </form>
+                <% } else { %>
+            </div>
+                    <div class="container">
+                        <h3>Notes: </h3>
+                        <% const notesArray = (result[i].notes).split("\n") %>
+
+                            <% for( let i = 0; i < notesArray.length; i++ ) { %>
+                                <p><%= notesArray[i] %></p>
+                            <% } %>
+                    </div>
+                <% } %>
+            </div>
+
+            
+        <% } %>
+    <% } else { %>
+        <div class="container">
+            <h3>You Have not created any Books Note</h3>
+        </div>
+    <% } %>
+
+</body>
+</html>

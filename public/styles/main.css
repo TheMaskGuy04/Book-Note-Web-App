@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Roboto+Mono&family=Rubik+Doodle+Shadow&display=swap');
+
+body {
+    background-color: #D4ADFC;
+    font-family: Noto Sans;
+    font-size: medium;
+    font-weight:600;
+}
+
+.header {
+    border-top: 1rem;
+}
+
+.navbar{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.book {
+    display: grid;
+    gap: 15px;
+    margin-bottom: 2rem;
+    padding: 2rem;
+}
+
+.bookImg {
+    grid-area: 1 / 1 / 7 / 4;
+    margin-right: 10px;
+}
+
+.title 
+{
+    grid-area: 1 / 4 / 1 / 12;
+    text-align: center;
+    text-decoration-line: underline;
+}
+
+.isbn {
+    grid-area: 2 / 4 / 2 / 12;   
+}
+
+.author {
+    grid-area: 3 / 4 / 3 / 12;
+}
+
+.date {
+    grid-area: 4 / 4 / 4 / 12;
+}
+
+.recommend {
+    grid-area: 5 / 4 / 5 / 12;
+}
+
+.summary {
+    grid-area: 6 / 4 / 8 / 12;
+}
+
+.notes {
+    grid-area: 9/ 4 / 9 / 12;
+}
